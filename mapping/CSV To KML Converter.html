@@ -1,0 +1,262 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<!-- Copyright 2013 ConvertCsv.com -->
+    <meta name="description" content="Convert CSV to KML">
+    <meta http-equiv="Cache-control" content="No-Cache">
+<title>CSV To KML Converter</title>
+<script src="CSV%20To%20KML%20Converter_files/ca-pub-2674404638298268.js" type="text/javascript" async=""></script><script src="CSV%20To%20KML%20Converter_files/underscore-min.js"></script>
+<script src="CSV%20To%20KML%20Converter_files/strsup.js"></script>
+<script src="CSV%20To%20KML%20Converter_files/localread.js"></script>
+<script src="CSV%20To%20KML%20Converter_files/csvparse.js"></script>
+<script src="CSV%20To%20KML%20Converter_files/csvsup.js"></script>
+<script src="CSV%20To%20KML%20Converter_files/blob.js"></script>
+<script src="CSV%20To%20KML%20Converter_files/filesaver.js"></script>
+<link href="CSV%20To%20KML%20Converter_files/layout3col.css" rel="stylesheet" type="text/css">
+<script src="CSV%20To%20KML%20Converter_files/RedQueryBuilder.js">//</script><script src="CSV%20To%20KML%20Converter_files/A31396B77C801AEE5573B0AB152276DB.js"></script>
+<link href="CSV%20To%20KML%20Converter_files/dark.css" rel="stylesheet" type="text/css">
+<script src="CSV%20To%20KML%20Converter_files/RedQueryBuilderFactory.js">//</script>
+<script src="CSV%20To%20KML%20Converter_files/csvquery.js"></script>
+
+<script type="text/javascript">
+    function assignText(s) {
+        document.getElementById('txt1').value = s;
+        parseAndOptions(CSV);
+        setupSortDD();
+        guessLatLon();
+        document.getElementById('btnRun').click();
+    }
+    function genit() {
+        if(CSV.mySortNeeded)parseAndOptions(CSV);
+        document.getElementById('txta').value = csvToKml(CSV, document.getElementById('txtNameCol').value, document.getElementById('txtDescCol').value, document.getElementById('txtLatCol').value, document.getElementById('txtLongCol').value);
+    }
+    function guessLatLon()
+    {
+        var j;
+        var lat=document.getElementById("txtLatCol").value;
+        var lon=document.getElementById("txtLongCol").value;
+
+        if(CSV.table.length<1) return true;
+        for (j = 1; j <= CSV.arHeaderRow.length; j++) {
+            if ( CSV.statsCnt[j - 1].fieldType == "N") 
+            {
+                if (lat == "" && CSV.arHeaderRow[j-1] && CSV.arHeaderRow[j-1].match(/lat/i)) {
+                    lat = j;
+                }
+                else if (lon == "" && CSV.arHeaderRow[j-1] && CSV.arHeaderRow[j-1].match(/lon|lng/i)) {
+                    lon = j;
+                }
+            }
+            if(lat!="" && lon!="")break;
+        }
+        if(lat!="") {
+            document.getElementById("txtLatCol").value = lat;
+        }
+        if(lon!="") {
+            document.getElementById("txtLongCol").value = lon;
+        }
+        return true;
+    }
+    function runExample()
+    {
+        document.getElementById("txtLatCol").value = "";
+        document.getElementById("txtLongCol").value = "";
+        document.getElementById('txt1').value=getExampleKml();
+        parseAndOptions(CSV);
+        setupSortDD();
+        guessLatLon();
+        document.getElementById('btnRun').click();
+    }
+</script>
+<style>
+ table { border-collapse:collapse; }
+ table,th, td { border: 1px solid black; }
+</style>
+<link href="CSV%20To%20KML%20Converter_files/socialwidgets.css" type="text/css" rel="stylesheet"><style>.rqbAndOrOpContainer{position:relative;width:4.8em;}.rqbAndOrOpUpper{border-style:solid;border-color:#bbb;border-width:10px 0 10px 10px;border-radius:20px 0 0 20px;width:1em;position:absolute;z-index:-1;margin-left:3.8em;}.rqbAndOrOp{position:absolute;background-color:#888;border-style:solid;border-color:#888;border-width:5px;border-radius:10px;}.rqbComparison{background-color:#888;border-style:solid;border-color:#888;border-width:5px;border-radius:10px;}</style></head> 
+<body onload="setupSortDD();document.getElementById('btnRun').click()">
+
+<div class="heading">
+<h1>Convert CSV To KML</h1>
+</div>
+<div class="container">
+<div class="leftnew">
+    <b>CSV Conversions</b><br>
+ 
+<script src="CSV%20To%20KML%20Converter_files/csvlinks.js"></script><a href="http://www.convertcsv.com/csv-to-csv.htm">CSV To Delimited</a><br><a href="http://www.convertcsv.com/csv-to-flat-file.htm">CSV To Flat File</a><br><a href="http://www.convertcsv.com/csv-to-html.htm">CSV To HTML Table</a><br><a href="http://www.convertcsv.com/csv-to-json.htm">CSV To JSON</a><br><a href="http://www.convertcsv.com/csv-to-kml.htm">CSV To KML</a><br><a href="http://www.convertcsv.com/csv-to-multiline-data.htm">CSV To Multi-line Data</a><br><a href="http://www.convertcsv.com/csv-to-sql.htm">CSV To SQL</a><br><a href="http://www.convertcsv.com/csv-to-xml.htm">CSV To XML</a><br><a href="http://www.convertcsv.com/fixed-width-to-csv.htm">Flat File to CSV</a><br><a href="http://www.convertcsv.com/html-table-to-csv.htm">HTML Table To CSV</a><br><a href="http://www.convertcsv.com/json-to-csv.htm">JSON To CSV</a><br><a href="http://www.convertcsv.com/sql-to-csv.htm">SQL To CSV</a><br><a href="http://www.convertcsv.com/xml-to-csv.htm">XML To CSV</a><br><b>Tools</b><br><a href="http://www.convertcsv.com/csv-escape-tool.htm">CSV Escape Tool</a><br><a href="http://www.convertcsv.com/csv-to-template-output.htm">CSV Template Engine</a><br><a href="http://www.convertcsv.com/csv-viewer-editor.htm">CSV Viewer</a><br><a href="http://www.convertcsv.com/generate-test-data.htm">Generate Test Data</a><br><a href="http://www.convertcsv.com/">CSV Home</a><br>
+<br>
+<br>
+<script async="" src="CSV%20To%20KML%20Converter_files/adsbygoogle.js"></script>
+<!-- Downsides Wide -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2674404638298268" data-ad-slot="2020261410"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;" frameborder="0" height="600" width="300"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<div class="rightnew">
+<!-- advertising goes here -->
+    <br>
+<br>
+<br>
+
+</div>
+<div class="middlenew">
+    <p>Use this tool to translate CSV into KML. You must have a description and latitude and longitude information in your data.
+        Planned enhancements of this tool will geocode an address field to supply the latitude and longitude.
+         </p>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2674404638298268";
+/* WideAcross */
+google_ad_slot = "4850643811";
+google_ad_width = 728;
+google_ad_height = 90;
+google_color_border = "FFF";//"000000";
+google_color_bg = "FFF";
+//-->
+</script>
+<script type="text/javascript" src="CSV%20To%20KML%20Converter_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins>
+    <br>
+<form>
+  <br><b>Choose CSV file here</b>
+    <input id="f1" onchange="loadTextFile(this,assignText)" title="Choose a local CSV file" type="file">
+   <br><b>or Enter an URL</b> <input size="40" name="url" id="url" title="Enter the URL of a web page returning CSV" type="text"> 
+         <input id="btnUrl" value="Load URL" title="Load CSV via URL" onclick="loadURL(document.getElementById('url').value)" type="button">
+   <br><b>or paste into Text Box below</b><br>
+   <label><input name="chkHeader" id="chkHeader" value="Y" onclick="parseAndOptions(CSV);guessLatLon()" checked="checked" type="checkbox"> First row is column names- Make: </label>
+<label><input id="chkHeaderUpper" onclick="if(this.checked)document.getElementById('chkHeaderLower').checked=false;parseAndOptions(CSV);" type="checkbox"> Upper</label>
+<label><input id="chkHeaderLower" onclick="if(this.checked)document.getElementById('chkHeaderUpper').checked=false;parseAndOptions(CSV);" type="checkbox"> Lower</label>
+   &nbsp;&nbsp;
+    Limit # of lines: <input id="txtRowLimit" size="5" maxlength="5" onblur="CSV.limit=this.value;parseAndOptions(CSV)" title="Specify how many records to convert" type="text">
+   <br>Field Separator: 
+   <label><input name="sep" id="sepAuto" value="" onclick="CSV.autodetect=true;parseAndOptions(CSV)" checked="checked" type="radio"> Auto Detect</label>
+   <label><input name="sep" id="sepComma" value="," onclick="CSV.autodetect=false;CSV.delimiter = this.value; parseAndOptions(CSV)" type="radio"> Comma-,</label>
+   <label><input name="sep" id="sepSemicolon" value=";" onclick="CSV.autodetect=false;CSV.delimiter = this.value; parseAndOptions(CSV)" type="radio"> Semi-colon-;</label>
+   <label><input name="sep" id="sepColon" value=":" onclick="CSV.autodetect=false;CSV.delimiter = this.value; parseAndOptions(CSV)" type="radio"> Colon-:</label>
+   <label><input name="sep" id="sepPipe" value="|" onclick="CSV.autodetect=false;CSV.delimiter = this.value; parseAndOptions(CSV)" type="radio"> Bar-|</label>
+   <label><input name="sep" id="sepTab" value=" " onclick="CSV.autodetect=false;CSV.delimiter = '\t'; parseAndOptions(CSV)" type="radio"> Tab</label>
+   <label><input name="sep" id="sepSpace" value=" " onclick="CSV.autodetect=false;CSV.delimiter = this.value; parseAndOptions(CSV)" type="radio"> Space</label>
+   <br><label><input value="Y" id="chkIgnoreDoubleQuote" onclick="CSV.ignoreQuote=this.checked;parseAndOptions(CSV)" title="All double quotes are data" type="checkbox"> Treat all double quotes as data</label>
+    <br><input value="Clear Input" onclick="window.location.reload(true)" type="button">
+    &nbsp; <input value="Example" onclick="runExample()" type="button"><br>
+  <textarea class="xxxxlined" rows="10" cols="80" id="txt1" onchange="parseAndOptions(CSV);setupSortDD();guessLatLon()" wrap="off">National Park,$ Obligated,State,Latitude,Longitude
+Abraham Lincoln Birthplace NHS,"$34,584",KY,37.61163334230,-85.64429400210
+Acadia,"$102,631",ME,44.35938077530,-68.23973198080
+Andersonville,"$65,133",GA,32.197905290823,-84.1302615685733
+Andrew Johnson ,"$17,949",TN,36.1562449930463,-82.8370902853041
+Antietam,"$54,743",MD,39.46238161400,-77.73598540160
+Appomattox Court House,"$12,651",VA,37.38264480730,-78.80274304090
+Assateague Island,"$51,921",MD,38.0556022623662,-75.2453836072023
+Big Bend,"$535,983",TX,29.01035623890,-103.31111552100
+Big South Fork National River and Recreation Area,"$3,009","TN, KY",36.38373752350,-84.67430698240
+</textarea>
+<div id="divInputCounts">Input Records- Header: true &nbsp; &nbsp;  Separator: , &nbsp; &nbsp;  Fields: 5 &nbsp; &nbsp;  Data Records: 9</div>
+   <input id="btnRun" value="Convert CSV To KML" title="Convert CSV To KML" onclick="genit()" type="button">
+   <br>
+    <span>Filter records in CSV (click "Add condition" below)</span> 
+    <div id="rqb"><div><table cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align: top;" align="left"><select aria-hidden="true" style="display: none;" class="gwt-ListBox rqbWhat rqbFrom"><option value="Please select">Please select</option><option selected="selected" value="Query Builder">Query Builder</option></select></td></tr><tr><td style="vertical-align: top;" align="left"><button aria-hidden="false" class="gwt-Button" type="button">Add condition</button></td></tr><tr><td style="vertical-align: top;" align="left"><div></div></td></tr></tbody></table></div></div>
+<table><tbody><tr><th colspan="4">Sort CSV &nbsp; 
+    <label><input id="chkIgnoreCase" value="Y" onclick="CSV.sortIgnoreCase=this.checked" type="checkbox"> Ignore Case</label></th></tr>
+    <tr><td>&nbsp;</td><td>Field #</td><td>Type</td><td>Direction</td></tr>
+    <tr><td>First By</td>
+    <td><select id="selSortFld1" onchange="sortStr()"><option selected="selected" value="">-Choose-</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+    <td><select id="selSortType1" onchange="sortStr()"><option selected="selected" value="">-Default-</option><option value="C">String</option><option value="N">Numeric</option></select></td>
+    <td><select id="selSortAsc1" onchange="sortStr()"><option selected="selected" value="">Ascending</option><option value="D">Descending</option></select></td>
+    </tr>
+    <tr><td>Then By</td>
+    <td><select id="selSortFld2" onchange="sortStr()"><option selected="selected" value="">-Choose-</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+    <td><select id="selSortType2" onchange="sortStr()"><option selected="selected" value="">-Default-</option><option value="C">String</option><option value="N">Numeric</option></select></td>
+    <td><select id="selSortAsc2" onchange="sortStr()"><option selected="selected" value="">Ascending</option><option value="D">Descending</option></select></td>
+    </tr>
+    <tr><td>Then By</td>
+    <td><select id="selSortFld3" onchange="sortStr()"><option selected="selected" value="">-Choose-</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+    <td><select id="selSortType3" onchange="sortStr()"><option selected="selected" value="">-Default-</option><option value="C">String</option><option value="N">Numeric</option></select></td>
+    <td><select id="selSortAsc3" onchange="sortStr()"><option selected="selected" value="">Ascending</option><option value="D">Descending</option></select></td>
+    </tr>
+     </tbody></table>
+    <br>
+    For each line in the CSV, identify the field position (starting at 1) for this information:<br>
+    <label> Name Field # <input id="txtNameCol" value="1" size="3" maxlength="3" title="Field position (starting at 1) for Name" required="" type="text"></label>
+    &nbsp; <label> Description Field # <input id="txtDescCol" value="2" size="3" maxlength="3" type="text"></label>
+    <br><label> Latitude Field # <input id="txtLatCol" value="4" size="3" maxlength="3" required="" type="text"></label>
+     &nbsp; <label> Longitude Field # <input id="txtLongCol" value="5" size="3" maxlength="3" required="" type="text"></label>
+    <br>Save this file on your server and reference the URL in Google Maps to display each marker.
+    <a href="http://maps.google.com/?q=http://convertcsv.com/test.kml">This is the Example KML using Google Maps.</a>
+   </form>
+   <hr>
+    </div>
+    <center>
+    <label><input size="15" id="fn" value="convertcsv" title="Enter filename without extension" type="text">.kml</label>
+    <label><input value="Save to Disk" onclick="saveFile(document.getElementById('txta').value,'kml')" type="button"></label><br>
+   <textarea id="txta" rows="15" cols="100" wrap="off">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;kml xmlns="http://earth.google.com/kml/2.0"&gt;
+&lt;Document&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Abraham Lincoln Birthplace NHS&lt;/name&gt;
+&lt;description&gt;$34,584&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-85.64429400210,37.61163334230,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Acadia&lt;/name&gt;
+&lt;description&gt;$102,631&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-68.23973198080,44.35938077530,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Andersonville&lt;/name&gt;
+&lt;description&gt;$65,133&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-84.1302615685733,32.197905290823,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Andrew Johnson &lt;/name&gt;
+&lt;description&gt;$17,949&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-82.8370902853041,36.1562449930463,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Antietam&lt;/name&gt;
+&lt;description&gt;$54,743&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-77.73598540160,39.46238161400,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Appomattox Court House&lt;/name&gt;
+&lt;description&gt;$12,651&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-78.80274304090,37.38264480730,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Assateague Island&lt;/name&gt;
+&lt;description&gt;$51,921&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-75.2453836072023,38.0556022623662,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Big Bend&lt;/name&gt;
+&lt;description&gt;$535,983&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-103.31111552100,29.01035623890,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+&lt;name&gt;Big South Fork National River and Recreation Area&lt;/name&gt;
+&lt;description&gt;$3,009&lt;/description&gt;
+&lt;Point&gt;&lt;coordinates&gt;-84.67430698240,36.38373752350,0&lt;/coordinates&gt;&lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;/Document&gt;
+&lt;/kml&gt;</textarea></center>
+</div>
+<div class="footer">
+  <hr class="fatline">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2674404638298268";
+/* WideAcross */
+google_ad_slot = "4850643811";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="CSV%20To%20KML%20Converter_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins>
+<br>
+<script src="CSV%20To%20KML%20Converter_files/footer.js"></script>Copyright © 2013 <a href="http://www.ddginc-usa.com/">Data Design Group, Inc.</a> All Rights Reserved &nbsp; <a href="http://www.convertcsv.com/contact.htm">Contact Us</a> &nbsp; <a href="http://www.convertcsv.com/changelog.htm">Change Log</a> &nbsp; <a href="http://www.convertcsv.com/terms-of-use.htm">Terms of Use</a> &nbsp; <a href="http://www.convertcsv.com/index.html">Home</a>
+</div>
+
+<script>
+parseAndOptions(CSV);
+</script>
+
+
+<iframe tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: medium none; left: -1000px; top: -1000px;" id="RedQueryBuilder" src='javascript:""'></iframe></body></html>

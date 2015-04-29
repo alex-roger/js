@@ -1,0 +1,380 @@
+/* CSS Document */
+	body { font-family:Arial, Helvetica, sans-serif; font-size:12px; background-color:#E4D7BC; background:url(../../images/map-background.jpg); margin-top:0px; }
+	h1 { font-family:Arial, Helvetica, sans-serif; font-size:24px; margin:0px; }
+	h2 { font-family:Arial, Helvetica, sans-serif; font-size:18px; margin:0px; }
+	h3 { font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:0px; }
+	h4 { font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; margin:0px; }
+
+	.info_block {
+		margin:10px;
+		padding:4px;
+		border: #663300 1px groove;
+		width:240px;
+		height:105px;
+		float:left;
+		display:block;
+		overflow:hidden;
+		position:relative;
+		background-color:#FFFFFF;
+    }
+
+	.info_block_dbl_wide {
+		margin:10px;
+		padding:4px;
+		border: #663300 1px groove;
+		width:510px;
+		height:105px;
+		float:left;
+		display:block;
+		overflow:hidden;
+		background-color:#FFFFFF;
+    }
+
+	.instruction_block {
+		margin:10px;
+		padding:4px;
+		border: #663300 1px groove;
+		width:510px;
+		height:240px;
+		float:left;
+		display:block;
+		overflow:hidden;
+		background-color:#FFFFFF;
+    }
+
+	#content_block {
+		margin:10px;
+		padding:8px;
+		border: #663300 1px groove;
+		width:944px;
+		/*height:240px;*/
+		float:left;
+		display:block;
+		/*overflow:hidden;*/
+		background-color:#FFFFFF;
+    }
+
+	.debugging_block {
+		margin:10px;
+		padding:4px;
+		border: #663300 1px groove;
+		width:510px;
+		height:231px;
+		float:left;
+		display:block;
+		overflow:auto;
+		background-color:#FFFFFF;
+    }
+	.clearboth { clear:both; }
+	textarea.batch_block {
+		display:block; 
+		float:left;
+		padding:4px;
+		border: #663300 1px groove;
+		width:510px;
+		height:231px;
+		overflow:auto;
+		background-color:#FFFFFF;
+		margin:0px;
+    }
+	div.io_container{
+		display:block; 
+		float:left;
+		margin: 0px 10px 10px 10px;
+	}
+	div.io_outer_container{
+		display:block; 
+		float:left;
+		margin: 0px;
+	}
+	div.io_label  {
+		font-size:large; 
+		font-weight:bold; 
+		padding:0px;
+	}
+	.searches_block {
+		margin:10px;
+		padding:4px;
+		border: #663300 1px groove;
+		width:900px;
+		float:left;
+		display:block;
+		overflow:hidden;
+		background-color:#FFFFFF;
+    }
+	span.search_crop {
+		width:240px;
+		display:block;
+		overflow:hidden;
+		white-space:nowrap;
+	}
+	div.search_col {
+		display:block;
+		float:left;
+		width:285px;
+	}
+	div.spacer {
+		clear: both;
+	}
+	div.row {
+		clear: both;
+		padding-top: 0px;
+	}
+	div.row span.label {
+		float: left;
+		width: 65px;
+		text-align: right;
+		padding-right:5px;
+	}
+	div.row span.value {
+		float: right;
+		width: 170px;
+		text-align: left;
+	}
+	div.row span.value_clip {
+		float: right;
+		width: 170px;
+		height: 14px;
+		text-align: left;
+		overflow:hidden;
+	}
+	div.row span.value input.value {
+		font-size:10px;
+	}
+	div.row span.label_short {
+		float: left;
+		width: 66px;
+		text-align: right;
+		padding-right:5px;
+		cursor:default;
+	}
+	div.row span.label_long {
+		float: left;
+		width: 182px;
+		text-align: right;
+		padding-right:5px;
+		cursor:default;
+	}
+	div.row span.value_short {
+		float: left;
+		width: 45px;
+		text-align: left;
+	}
+	div.row span.value_long {
+		float: left;
+		width: 160px;
+		text-align: left;
+	}
+	div.row span.cb_short {
+		float: left;
+		width: 120px;
+		text-align: left;
+	}
+	div.row span.cb_long {
+		float: left;
+		width: 240px;
+		text-align: left;
+	}
+	div.row span.value input.text {
+		text-align:center;
+		font-size:10px;
+		vertical-align:top;
+		height:10px;
+		width:140px;
+		padding-left:0;
+		padding-right:0;
+	}
+	input.radiobtn {
+		font-size:10px;
+	}
+	label.radiobtn {
+		height:10px;
+	}
+	div.row span.latest {
+		float: left;
+		width: 240px;
+		line-height:10px;
+		text-align: left;
+		white-space:nowrap;
+		overflow:hidden;
+	}
+	div.searches {
+		margin: 0px 0px 0px 10px;
+		width:275px;
+		height:20px;
+		overflow:hidden;
+		background-color:#FFFFFF;
+		white-space:nowrap;
+	}
+	div.search_head_container {
+		width:900px;
+	}
+	div.row2 {
+		clear: both;
+		padding: 10px 0px 0px 0px;
+	}
+	div.row2 span.label {
+		float: left;
+		width: 60px;
+		text-align: right;
+	}
+	div.row2 span.value {
+		text-align: left;
+	}
+	div.row2 span.value input.text {
+		text-align:center;
+		font-size:14px;
+		vertical-align:top;
+		width:170px;
+	}
+	div.row2 span.value_loc input.text {
+		text-align:center;
+		font-size:14px;
+		vertical-align:top;
+		width:220px;
+	}
+	a { color:#666600; font-weight:bold; text-decoration:none; }
+	a:hover { color:#663300; font-weight:bold; text-decoration:none; }
+	.important {
+		display:inline-block;
+		font-weight:normal;
+		margin:8px 4px 0px 4px;
+	}
+	a.important{ font-weight:normal; }
+	.important a {
+		color:#666600; text-decoration:none;
+	}
+	.important a:link {
+		color:#663300; 
+	}
+	.important a:visited {
+		color:#663300; 
+	}
+	.important a:hover {
+		color:#663300;
+	}
+	.important a:active {
+		color:#663300; 
+	}
+	.copyright	{
+		color: #999999;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: x-small;
+		margin-bottom: 0px;
+	}
+	#footer {
+		text-align: center;
+		padding-top: 10px;
+		clear: both;
+	}
+	.olive { color:#666600; }
+	.redbrown { color:#663300; }
+	#footer .copyright a:link { color:#666666; text-decoration: none; font-size: x-small; }
+	#footer .copyright a:visited { color:#666666; text-decoration: none; font-size: x-small; }
+	#footer .copyright a:hover { color:#999999; text-decoration: none; font-size: x-small; }
+	#footer .copyright a:active { color:#999999; text-decoration: none; font-size: x-small; }
+
+	#h1title { text-align:center; margin-top:-16px; padding-top:0px; }
+	
+	#w3cvalid_left { display:block; float:left; margin-left:10px; }
+	#w3cvalid_right { display:block; float:right; margin-right:10px; }
+
+	.adsense_250x250 {
+		margin:10px;
+		width:250px;
+		height:250px;
+		display:block;
+		float:left;
+		overflow:hidden;
+	}
+	.adsense_300x250 {
+		margin:10px;
+		width:300px;
+		height:250px;
+		display:block;
+		float:left;
+		overflow:hidden;
+	}
+	
+	#hold_three_boxes {
+		display:block;
+		float:left;
+		width:540px;
+	}
+	
+	.adsense_728x90 {
+		/*margin:10px;*/
+		width:728px;
+		height:90px;
+		display:block;
+		float:left;
+		overflow:hidden;
+		border: #663300 1px groove;
+	}
+
+	.adsense_728x90_no_border {
+		width:728px;
+		height:90px;
+		display:block;
+		float:left;
+		overflow:hidden;
+	}
+
+	.adsense_160x600 {
+		width:160px;
+		height:600px;
+		display:block;
+		float:right;
+	}
+	
+	#map_container {
+		/*width:100%;*/
+	}
+	#map_canvas_resize_container {
+		text-align:center;
+		height:16px;
+	}
+	#map_canvas_increase {
+		display:inline-block;
+		height:16px;
+		width:32px;
+		background-image:url(../../images/increase-gray.gif);
+		background-position:center center;
+		background-repeat:no-repeat;
+		cursor:pointer;
+	}
+	#map_canvas_increase:hover {
+		background-image:url(../../images/increase.gif);
+		background-position:center center;
+		background-repeat:no-repeat;
+	}
+	#map_canvas_decrease {
+		display:inline-block;
+		height:16px;
+		width:32px;
+		background-image:url(../../images/decrease-gray.gif);
+		background-position:center center;
+		background-repeat:no-repeat;
+		cursor:pointer;
+	}
+	#map_canvas_decrease:hover {
+		background-image:url(../../images/decrease.gif);
+		background-position:center center;
+		background-repeat:no-repeat;
+	}
+	#indicator {
+		display:block;
+		float:right;
+		width:16px;
+		height:16px;
+		position:absolute;
+		top:2px;
+		right:2px;
+	}
+	.searches span {
+		cursor:pointer;
+	}
+	
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-min-device-pixel-ratio: 1),
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+}

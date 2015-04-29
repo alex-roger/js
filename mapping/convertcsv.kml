@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Placemark>
+<name>Abraham Lincoln Birthplace NHS</name>
+<description>$34,584</description>
+<Point><coordinates>-85.64429400210,37.61163334230,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Acadia</name>
+<description>$102,631</description>
+<Point><coordinates>-68.23973198080,44.35938077530,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Andersonville</name>
+<description>$65,133</description>
+<Point><coordinates>-84.1302615685733,32.197905290823,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Andrew Johnson </name>
+<description>$17,949</description>
+<Point><coordinates>-82.8370902853041,36.1562449930463,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Antietam</name>
+<description>$54,743</description>
+<Point><coordinates>-77.73598540160,39.46238161400,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Appomattox Court House</name>
+<description>$12,651</description>
+<Point><coordinates>-78.80274304090,37.38264480730,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Assateague Island</name>
+<description>$51,921</description>
+<Point><coordinates>-75.2453836072023,38.0556022623662,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Big Bend</name>
+<description>$535,983</description>
+<Point><coordinates>-103.31111552100,29.01035623890,0</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Big South Fork National River and Recreation Area</name>
+<description>$3,009</description>
+<Point><coordinates>-84.67430698240,36.38373752350,0</coordinates></Point>
+</Placemark>
+</Document>
+</kml>

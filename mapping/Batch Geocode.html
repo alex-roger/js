@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Batch Geocode</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Batch geocode addresses to latitude and longitude coordinates for free.">
+<meta name="keywords" content="free, batch geocode, latitude, longitude, coordinates, address, geocode, lat, lon, lng">
+<link href="Batch%20Geocode_files/styles.css" rel="stylesheet" type="text/css">
+<script async="" src="Batch%20Geocode_files/cbgapi.js"></script><script async="" src="Batch%20Geocode_files/cbgapi_002.js"></script><script style="" src="Batch%20Geocode_files/commonutilgeocoder.js" charset="UTF-8" type="text/javascript"></script><link href="Batch%20Geocode_files/socialwidgets.css" type="text/css" rel="stylesheet"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script src="Batch%20Geocode_files/stats.js" charset="UTF-8" type="text/javascript"></script><link href="Batch%20Geocode_files/contentpreview.css" type="text/css" rel="stylesheet"><link href="Batch%20Geocode_files/contentclipper.css" type="text/css" rel="stylesheet"></head>
+
+<body><script src="Batch%20Geocode_files/ca-pub-5706779946194051.js" type="text/javascript" async=""></script><script type="text/javascript" src="Batch%20Geocode_files/jquery.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/js.js"></script><script src="Batch%20Geocode_files/main.js" type="text/javascript"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/debugging.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/string_funcs.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/xmlhttp_init.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/num_range.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/cookies.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/coordinate-conversion.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/map_v3_1.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/encoder.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/batch-geocode.js"></script>
+<script type="text/javascript" src="Batch%20Geocode_files/batch-geocode-funcs_v3_1.js"></script>
+<script type="text/javascript">
+<!--
+	var lat = 45;
+	var lon = -90;
+	var zoom = 13;
+	var host = "www.findlatitudeandlongitude.com";
+	var self = "http://www.findlatitudeandlongitude.com/batch-geocode/";
+	var sescod = 3588556;
+	var format = 0;
+	var delimiter = 0;
+	var iPhone = false;
+//-->
+</script>
+<h1 title="Free Batch Geocoding">Batch Geocoding</h1>
+
+<!-- Open Adsense -->
+<div class="adsense_728x90">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5706779946194051";
+/* Leaderboard */
+google_ad_slot = "2174456710";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="Batch%20Geocode_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left: 0px; position: absolute; top: 0px;" frameborder="0" height="90" width="728"></iframe></ins></ins>
+</div>
+<!-- Close Adsense -->
+
+<div class="clearboth"></div>
+
+<a href="#instructions">instructions</a>
+<form name="form1">
+
+<div class="io_outer_container">
+<div class="io_container">
+<div class="io_label">Input</div>
+<textarea name="batch_in" id="batch_in" class="batch_block" title="Enter your locations/addresses in this field, one per line."></textarea>
+</div><!-- close:class=io_container -->
+
+<div class="clearboth"></div>
+
+<div class="io_container">
+<div class="io_label">Output</div>
+<textarea name="batch_out" id="batch_out" class="batch_block" title="After running the batch geocoder copy the results from this field."></textarea>
+</div><!-- close:class=io_container -->
+
+</div><!-- close:class=io_outer_container -->
+
+<div style="height:11px; width:120px;"></div>
+
+<div class="info_block">
+<h4 title="Select your geocoding settings.">Batch Geocode Settings</h4>
+<div class="row"><span><label title="Include failed geocode records in the output results."><input name="include_failed" value="1" checked="checked" onclick="set_cookie_cval(this)" type="checkbox"> include failed geocodes in output</label></span></div>
+<div class="row"><span><label title="Include a row of field labels at the top of the output results."><input name="include_header" value="1" checked="checked" onclick="set_cookie_cval(this)" type="checkbox"> include header row in output</label></span></div>
+<div class="row" title="Delimiter separating the output fields."><span><span class="label" style="margin-top:2px;">delimiter:</span><span class="value">
+<select name="delimiter" size="1" onchange="onDelimiterChange(this)" style="font-size:12px;">
+	<option value="0" selected="selected">comma</option>
+	<option value="1">pipe</option>
+	<option value="2">tab</option>
+</select>&nbsp;<a href="#comma">*</a></span></span></div>
+
+<div class="row" title="Format of the latitude and longitude output."><span><span class="label" style="margin-top:2px;">format:</span>
+<span style="float:left; display:inline;"><select name="format" size="1" onchange="onFormatChange(this)" style="font-size:12px;">
+	<option value="0" selected="selected">° dec</option>
+	<option value="1">° '</option>
+	<option value="2">° ' "</option>
+</select></span>
+
+<span style="float:right; display:inline;"><input name="geocode_btn" id="geocode_btn" value="geocode" title="Click to run/pause/resume the batch geocoder." type="button"></span>
+
+</span></div>
+</div><!-- close:class=info_block -->
+
+<div class="info_block">
+<h4 title="Select the fields you want in your output.">Batch Geocode Output Fields</h4>
+
+<div class="row"><span>&nbsp;</span></div>
+<div class="row">
+<span class="cb_short"><label title="Address submitted for geocoding."><input name="add_in_fld" value="1" checked="checked" onclick="set_cookie_cval(this)" type="checkbox"> address in</label></span>
+<span class="cb_short"><label title="Nearest address returned by geocoder."><input name="add_out_fld" value="1" onclick="set_cookie_cval(this)" type="checkbox"> address out</label></span>
+</div>
+
+<div class="row">
+<span class="cb_short"><label title="Geocoder returned latitude."><input name="lat_fld" value="1" checked="checked" onclick="set_cookie_cval(this)" type="checkbox"> latitude</label></span>
+<span class="cb_short"><label title="Geocoder returned longitude."><input name="lon_fld" value="1" checked="checked" onclick="set_cookie_cval(this)" type="checkbox"> longitude</label></span>
+</div>
+
+<div class="row">
+<span class="cb_short"><label title="Level of specificity. See Batch Geocode Results."><input name="accuracy_fld" value="1" onclick="set_cookie_cval(this)" type="checkbox"> accuracy</label></span>
+<span class="cb_short"><label title="200: successful geocode, 400: bad request, 500: server error, 601: missing query or address, 602: unknown location, 620: too many queries."><input name="status_fld" value="1" onclick="set_cookie_cval(this)" type="checkbox"> status</label></span>
+</div>
+
+<div class="row">
+<span id="line_span"><span class="label">&nbsp;</span><span class="value"></span></span>
+</div>
+
+</div><!-- close:class=info_block -->
+
+<div class="info_block">
+<h4 title="Displays the results of your batch geocoding run.">Batch Geocode Results</h4><img src="Batch%20Geocode_files/pix.gif" id="indicator" alt="indicator" height="16" width="16">
+
+<div class="row">
+<span id="processed"><span class="label_short">Processed:</span><span class="value_short">0</span></span>
+<span id="time"><span class="label_short">Time:</span><span class="value_short">0</span></span>
+</div>
+
+<div class="row" style="height:6px; width:6px;"></div>
+
+<div class="row">
+<span id="acc0"><span class="label_long">Address:</span><span class="value_short">0</span></span>
+</div>
+
+<div class="row">
+<span id="acc1"><span class="label_long">Street:</span><span class="value_short">0</span></span>
+</div>
+
+<div class="row">
+<span id="acc2"><span class="label_long">Locality:</span><span class="value_short">0</span></span>
+</div>
+
+<div class="row">
+<span id="acc3"><span class="label_long">General:</span><span class="value_short">0</span></span>
+</div>
+
+<div class="row">
+<span id="acc4"><span class="label_long">FAIL:</span><span class="value_short">0</span></span>
+</div>
+</div><!-- close:class=info_block -->
+<!-- start adsense -->
+<div class="adsense_250x250">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5706779946194051";
+/* First Ad Unit 250x250 */
+google_ad_slot = "1660321424";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="Batch%20Geocode_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:250px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:250px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left: 0px; position: absolute; top: 0px;" frameborder="0" height="250" width="250"></iframe></ins></ins>
+</div>
+<!-- stop adsense -->
+<script type="text/javascript">
+<!--
+	function do_toggle_menu() {
+		var menu_el = document.getElementById("menu");
+		var el = document.getElementById("menu_expander");
+		if (el.className == "menu_opener_closed") {
+			el.className = "menu_opener_opened";
+			menu_el.className = "info_block_open";
+		} else {
+			el.className = "menu_opener_closed";
+			menu_el.className = "info_block";
+		}
+	}
+//-->
+</script>
+<div id="menu" class="info_block">
+	<h4 style="display:block; float:left; margin-bottom:0px; clear:none;">Menu</h4>
+	<span id="menu_expander" class="menu_opener_closed" onclick="do_toggle_menu()"><img src="Batch%20Geocode_files/pix.gif" alt="expand/contract menu" height="13" width="13"></span>
+	<div style="display:block; float:left; margin:0px 0px 0px 30px; clear:none;"><!-- AddThis Button BEGIN -->
+<script type="text/javascript">
+var addthis_disable_flash = true;
+var addthis_config = {
+    data_track_clickback: true,
+	data_track_addressbar: true,
+	ui_click: true
+}
+</script>
+<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=zwief"><img src="Batch%20Geocode_files/lg-share-en.gif" alt="Bookmark and Share" style="border:0" height="16" width="125"></a><script type="text/javascript" src="Batch%20Geocode_files/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+</div>
+    <span style="display:inline; float:right; margin:0px;"><a style="display:inline; margin:0px;" href="http://www.findlatitudeandlongitude.com/" title="Convert Latitude and Longitude">Home</a></span>
+<br>
+
+<div class="row"><span><a href="http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude" title="Reverse geocode, get the nearest address of a latitude-longitude coordinate pair.">Lat/Lng to Address</a> · <a href="http://www.findlatitudeandlongitude.com/find-latitude-and-longitude-from-address" title="Address Location Finder: Geocode an address i.e. find the latitude-longitude coordinate pair of an address.">Address to Lat/Lng</a></span></div>
+
+<div class="row"><span><a href="http://www.findlatitudeandlongitude.com/batch-geocode/" title="Free Batch Geocode: geocode multiple locations in a single batch.">Batch Geocode</a> · <a href="http://www.findlatitudeandlongitude.com/batch-reverse-geocode/" title="Free Reverse Batch Geocode: reverse geocode multiple latitude-longitude coordinate pairs in a single batch.">Batch Reverse Geocode</a></span></div>
+
+<div class="row"><span><a href="http://www.findlatitudeandlongitude.com/searches/" title="Latest searches on the site.">Location Searches</a> · <a href="http://www.findlatitudeandlongitude.com/reverse-geocodes/" title="Reverse geocodes, latest to oldest.">Reverse Geocodes</a></span></div>
+
+<div class="row"><span style="float:left;"><a href="http://www.findlatitudeandlongitude.com/antipode-map/" title="Tunneling Map AKA Antipodes Map">Antipodes Map</a> (Tunneling Map)</span></div>
+
+<div class="row"><span style="float:left;"><a href="http://www.findlatitudeandlongitude.com/gps-coordinates-converter/" title="Convert latitude-longitude coordinates between degrees decimal and various degrees minutes seconds formats.">GPS Coordinates Converter</a></span></div>
+
+<div class="row"><span title="Give us your constructive input on this site."><a href="mailto:webmaster@findlatitudeandlongitude.com?Subject=Feedback/Suggestion">Feedback</a> · <a href="http://www.findlatitudeandlongitude.com/click-lat-lng-list/" title="Record multiple latitude-longitude coordinate pairs by clicking in the map.">Record Lat/Longs</a></span></div>
+
+<div class="row"><span style="float:left;"><a href="http://www.findlatitudeandlongitude.com/search-phrases" title="How you found us.">How You Found Us</a> · <a href="http://www.findlatitudeandlongitude.com/latest-search-phrases" title="Latest Searches">Searches</a></span></div>
+
+</div><div class="info_block">
+<h4>Contact Information</h4>
+<div class="row"><span class="label">Developer:</span><span class="value">David B. Zwiefelhofer</span></div>
+<div class="row"><span class="label">Email:</span><span class="value"><a href="mailto:webmaster@findlatitudeandlongitude.com">webmaster</a></span></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div style="text-align:center;">
+<input name="cmd" value="_s-xclick" type="hidden">
+<input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+" type="hidden">
+<input src="Batch%20Geocode_files/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" type="image">
+<img alt="" src="Batch%20Geocode_files/pixel.gif" border="0" height="1" width="1">
+
+</div>
+<!--<div class="row">&nbsp;</div>-->
+<div class="row">
+<!-- Place this tag where you want the +1 button to render. -->
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="Batch%20Geocode_files/fastbutton.html" name="I0_1410262911629" id="I0_1410262911629" vspace="0" tabindex="0" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script gapi_processed="true" src="Batch%20Geocode_files/platform.js" async="" defer="defer"></script>
+</div>
+<div class="row"><div class=" fb_reset" id="fb-root"><script async="" src="Batch%20Geocode_files/all.js"></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="Batch%20Geocode_files/ZEbdHPQfV3x.html" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="Batch%20Geocode_files/ZEbdHPQfV3x_002.html" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<!--<div id="fbsharebutton"></div> -->
+<div id="fblike"><fb:like fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2Fwww.findlatitudeandlongitude.com%2Fbatch-geocode%2F%23instructions&amp;locale=en_US&amp;sdk=joey&amp;width=450" fb-xfbml-state="rendered" class=" fb_iframe_widget" width="450" action="like"><span style="vertical-align: bottom; width: 450px; height: 20px;"><iframe class="" src="Batch%20Geocode_files/like.html" style="border: medium none; visibility: visible; width: 450px; height: 20px;" title="fb:like Facebook Social Plugin" scrolling="no" allowtransparency="true" name="f5cbfa0b8b26bc" frameborder="0" height="1000px" width="450px"></iframe></span></fb:like></div> 
+<!--<div id="fbcomments"></div>-->
+
+	<script type="text/javascript">
+	// embed Facebook components (avoids xhtml validation issues)
+	
+	var c = document.getElementById('fbrecommendations');
+	
+	if (c != null) {
+	var e = document.createElement('fb:recommendations');
+	e.setAttribute('site', 'http://www.findlatitudeandlongitude.com/batch-geocode/');
+	e.setAttribute('width', '246');
+	e.setAttribute('height', '280');
+	e.setAttribute('header', 'true');
+	e.setAttribute('colorscheme', 'light');
+	c.appendChild(e);
+	}
+	
+	c = document.getElementById('fblike');
+	
+	if (c != null) {
+	e = document.createElement('fb:like');
+	e.setAttribute('action', 'like');
+	e.setAttribute('width', '450');
+	c.appendChild(e);
+	}
+	
+	c = document.getElementById('fbsharebutton');
+	
+	if (c != null) {
+	e = document.createElement('fb:share-button');
+	e.setAttribute('action', 'share');
+	e.setAttribute('type', 'button_count');
+	e.setAttribute('width', '473');
+	c.appendChild(e);
+		}
+		
+	c = document.getElementById('fblogin');
+	
+	if (c != null) {
+	e = document.createElement('fb:login-button');
+	e.setAttribute('autologoutlink', 'true');
+  c.appendChild(e);
+	}
+	
+	c = document.getElementById('fbcomments');
+	
+	if (c != null) {
+	e = document.createElement('fb:comments');
+	e.setAttribute('numposts', '100');
+	e.setAttribute('width', '880');
+	c.appendChild(e);
+	}
+	
+// End of additional feautures //
+	
+	// FaceBook initialise
+	window.fbAsyncInit = function () { FB.init({ status: true, cookie: true, xfbml: true }); }; (function () { 
+	var e = document.createElement('script'); 
+	e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js'; e.async = 1; 
+	document.getElementById('fb-root').appendChild(e); 
+	} ());
+	
+	</script>
+</div>
+</div></form><!--close:class=info_block-->
+<div class="io_container">
+<div class="io_label">Instructions</div><a name="instructions"></a>
+<textarea name="instructions" id="instructions" class="batch_block" readonly="readonly">To
+ convert addresses or locations into latitude-longitude coordinate 
+pairs:
+1. Enter your addresses/locations in the input field, one address per 
+line, up to a few hundred addresses.
+2. Select the desired outputs via the checkboxes in the "Batch Geocode 
+Output Fields" box.
+3. Choose whether or not to include failed geocodes in your output via 
+the checkbox in the "Batch Geocode Settings" box.
+4. Likewise, choose whether or not you want a header row of field labels
+ at the top of your output in the same box.
+5. Select a field delimiter (separates the output fields) for your 
+output in the same box.
+6. Click the "geocode" button to begin geocoding.
+7. Your results will be displayed incrementally in the "output" field. 
+The "Batch Geocode Results" box will display the total number of 
+addresses processed, the time it took to process them and the results of
+ the processing.
+8. When processing is complete you can copy the results from the output 
+field.
+</textarea>
+</div><!-- close:class=io_container -->
+
+
+<div class="info_block">
+<h4>Notes</h4>
+<div class="row"><span><a name="comma">*</a>Selecting comma as the delimiter will cause the address fields to be double quote enclosed.</span></div>
+<div class="row"><span>&nbsp;</span></div>
+<div class="row"><span>Problems? Questions? Suggestions? Please <a href="mailto:webmaster@findlatitudeandlongitude.com?Subject=Batch%20Geocoding">let us know</a>.</span></div>
+</div><!-- close:class=info_block -->
+
+
+
+
+<div id="footer"><p class="copyright">
+  ©
+  2008 - 2014 David B. Zwiefelhofer. All Rights Reserved. <a href="http://www.fsbowebsite.com/">FSBO</a> Website Design. Please review our <a href="http://www.findlatitudeandlongitude.com/privacy-policy/">Privacy Policy</a>.</p></div><!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-10StYEx74Kghk"
+};
+</script>
+<script type="text/javascript" src="Batch%20Geocode_files/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-10StYEx74Kghk.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Batch%20Geocode_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6417143-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="Batch%20Geocode_files/postmessageRelay.html" id="oauth2relay2069021187" name="oauth2relay2069021187"></iframe></body></html>

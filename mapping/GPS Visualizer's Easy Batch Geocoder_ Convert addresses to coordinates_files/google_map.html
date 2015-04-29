@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"><head><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><link href="google_map_data/css.css" rel="stylesheet" type="text/css"><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}</style>
+		<title>Geocoded locations</title>
+		<!-- base href="http://www.gpsvisualizer.com/geocoder/google_map.html" -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<script style="" src="google_map_data/commonmapoverlay.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/utilonion.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/controlsinfowindowstats.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/commonmapoverlay_002.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/utilinfowindow.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/commonutilstats.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/stats.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/marker.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/commonmapoverlay_003.js" charset="UTF-8" type="text/javascript"></script><script src="google_map_data/utilinfowindow_002.js" charset="UTF-8" type="text/javascript"></script><script src="GPS%20Visualizer%27s%20Easy%20Batch%20Geocoder_%20Convert%20addresses%20to%20coordinates_files/commonutilstats.js" charset="UTF-8" type="text/javascript"></script><script src="GPS%20Visualizer%27s%20Easy%20Batch%20Geocoder_%20Convert%20addresses%20to%20coordinates_files/commonutilstats.js" charset="UTF-8" type="text/javascript"></script><script src="GPS%20Visualizer%27s%20Easy%20Batch%20Geocoder_%20Convert%20addresses%20to%20coordinates_files/stats_002.js" charset="UTF-8" type="text/javascript"></script></head>
+	<body style="margin:0px;">
+		<script type="text/javascript">
+			var google_api_key = 'AIzaSyDcCHFfiJpIbj15YRTw-s9SGepoxcS8UAo'; // Your project's Google Maps API key goes here (https://code.google.com/apis/console)
+			if (document.location.toString().indexOf('http://www.gpsvisualizer.com') > -1) { google_api_key = ''; }
+			document.writeln('<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;libraries=geometry&amp;sensor=false'+((self.google_api_key&&document.location.toString().indexOf('file://')!=0)?'&amp;key='+google_api_key:'')+'"><'+'/script>');
+		</script><script type="text/javascript" src="google_map_data/js_003.js"></script><script src="google_map_data/maingeometry_003.js" type="text/javascript"></script>
+<script type="text/javascript" src="google_map_data/js_002.js"></script><script src="google_map_data/maingeometry_003.js" type="text/javascript"></script><script src="google_map_data/maingeometry_002.js" type="text/javascript"></script>
+<script type="text/javascript" src="google_map_data/js.js"></script><script src="google_map_data/maingeometry_003.js" type="text/javascript"></script><script src="google_map_data/maingeometry_002.js" type="text/javascript"></script><script src="google_map_data/maingeometry.js" type="text/javascript"></script>
+
+		<div style="margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:0px;">
+			<div id="gmap_div" style="width: 610px; height: 210px; margin: 0px; background-color: rgb(255, 255, 255); overflow: hidden; position: relative;"><div style="overflow: hidden; width: 610px; height: 210px;"><img src="google_map_data/StaticMapService.png" style="width: 610px; height: 210px;"></div><div style="top: 37px; left: 37px; width: 13px; height: 13px; position: relative; display: block; cursor: pointer; overflow: hidden; z-index: 99999;" title="double-click to re-center map" id="gv_recenter_map"><img src="google_map_data/mapcontrols2.png" style="position:absolute; left:-22px; top:-22px; width:59px; height:458px; filter:alpha(opacity=0); -moz-opacity:0; opacity:0;" onmouseover="this.style.filter = 'alpha(opacity=50)'; this.style.mozOpacity = '0.50'; this.style.opacity = '0.50';" onmouseout="this.style.filter = 'alpha(opacity=0)'; this.style.mozOpacity = '0'; this.style.opacity = '0';"></div><div style="display: block; margin: 1px 3px 4px; visibility: hidden;" id="gv_center_container"><table style="cursor:crosshair; filter:alpha(opacity=80); -moz-opacity:0.80; opacity:0.80;" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="middle"><td><div id="gv_center_coordinates" class="gv_center_coordinates" onclick="GV_Toggle('gv_crosshair'); gvg.crosshair_temporarily_hidden = false;" title="Click here to turn center crosshair on or off">Center: <span id="gv_center_coordinate_pair" ondblclick="SelectText('gv_center_coordinate_pair')">40.00000,-40.00000</span></div></td><td><div id="gv_measurement_icon" style="display:block; width:23px; height:15px; margin-left:3px; cursor:pointer;"><a href="javascript:void(0);" onclick="GV_Place_Measurement_Tools(); GV_Measurements.New('distance');" title="Click here for measurement tools" style="cursor:pointer;"><img src="google_map_data/ruler.gif" class="gmnoprint" border="0" height="13" vspace="1" width="23"></a></div></td></tr></tbody></table></div><div class="gmnoprint" style="display: block; position: absolute; top: 98px; left: 298px; z-index: 99999;" id="gv_crosshair_container"><div style="width: 15px; height: 15px; display: none;" id="gv_crosshair"><img src="google_map_data/crosshair.png" alt="" height="15" width="15"></div></div><div style="display: block; padding: 1px; background-color: rgb(255, 255, 255); opacity: 0.8; margin: 3px 1px 2px 4px; visibility: hidden;" id="gv_credit">Map created at <a style="font:inherit;" target="_blank" href="http://www.gpsvisualizer.com/">GPSVisualizer.com</a></div><div style="display: none; height: 14px; width: auto; overflow: hidden; margin: 0px; padding: 0px; background-color: transparent; visibility: hidden;" id="gv_copyright_container"><div style="position:absolute; white-space:nowrap; background-color:#f5f5f5; opacity:0.5; width:100%; height:100%"><!-- --></div><div id="gv_map_copyright" style="padding:1px 3px 1px 3px; position:relative; white-space:nowrap;"></div></div><div style="display: none;" id="gv_preload_infowindow"></div></div>
+		<div style="position: absolute; visibility: hidden;" id="gv_marker_tooltip"></div></div>
+
+		
+		<!-- begin GPS Visualizer setup script (must come after maps.google.com code) -->
+		<script type="text/javascript">
+			/* Global variables used by the GPS Visualizer functions (1380399883): */
+			gv_options = {};
+			
+			// basic map parameters:
+			gv_options.center = [40,-40];  // [latitude,longitude] - be sure to keep the square brackets
+			gv_options.zoom = 2;  // higher number means closer view; can also be 'auto'
+			gv_options.map_type = 'G_NORMAL_MAP';  // popular map_type choices are 'GV_STREET', 'GV_SATELLITE', 'GV_HYBRID', 'GV_TERRAIN', 'GV_TOPO_US', 'GV_TOPO_WORLD', 'GV_OSM'
+			gv_options.map_opacity = 1;  // number from 0 to 1
+			gv_options.full_screen = false;  // true|false: should the map fill the entire page (or frame)?
+			gv_options.width = 610;  // width of the map, in pixels
+			gv_options.height = 210;  // height of the map, in pixels
+			
+			gv_options.map_div = 'gmap_div';  // the name of the HTML "div" tag containing the map itself; usually 'gmap_div'
+			gv_options.doubleclick_zoom = true;  // true|false: zoom in when mouse is double-clicked?
+			gv_options.doubleclick_center = true;  // true|false: re-center the map on the point that was double-clicked?
+			gv_options.mousewheel_zoom = true; // true|false; or 'reverse' for down=in and up=out
+			gv_options.autozoom_adjustment = 0;
+			gv_options.tilt = false; // true|false: allow Google to show 45-degree tilted aerial imagery?
+			gv_options.street_view = false; // true|false: allow Google Street View on the map
+			gv_options.animated_zoom = false; // true|false: may or may not work properly
+				
+			// widgets on the map:
+			gv_options.zoom_control = 'small'; // 'large'|'small'|'none'
+			gv_options.recenter_button = true; // true|false: is there a 'double-click to recenter' option in the zoom control?
+			gv_options.scale_control = true; // true|false
+			gv_options.center_coordinates = true;  // true|false: show a "center coordinates" box and crosshair?
+			gv_options.mouse_coordinates = false;  // true|false: show a "mouse coordinates" box?
+			gv_options.crosshair_hidden = true;  // true|false: hide the crosshair initially?
+			gv_options.map_opacity_control = true;  // true|false
+			gv_options.disable_google_pois = false;  // true|false: if you disable clickable POIs, you also lose the labels on parks, airports, etc.
+			gv_options.measurement_tools = { visible:false, distance_color:'', area_color:'', position:[] };
+
+			// marker-related options:
+			gv_options.default_marker = { color:'magenta',icon:'googlemini',opacity:1.00 }; // icon can be a URL, but be sure to also include size:[w,h] and optionally anchor:[x,y]
+			gv_options.marker_tooltips = true; // do the names of the markers show up when you mouse-over them?
+			gv_options.marker_shadows = true; // true|false: do the standard markers have "shadows" behind them?
+			gv_options.marker_link_target = '_blank'; // the name of the window or frame into which markers' URLs will load
+			gv_options.info_window_width = 0;  // in pixels, the width of the markers' pop-up info "bubbles" (can be overridden by 'window_width' in individual markers)
+			gv_options.hide_labels = false;  // true|false: hide labels when map first loads?
+			gv_options.labels_behind_markers = false; // true|false: are the labels behind other markers (true) or in front of them (false)?
+			gv_options.label_offset = [0,0];  // [x,y]: shift all markers' labels (positive numbers are right and down)
+			gv_options.label_centered = false;  // true|false: center labels with respect to their markers?  (label_left is also a valid option.)
+			gv_options.marker_filter_options = {enabled:false};
+			gv_options.synthesize_fields = {}; // for example: {label:'{name}'} would cause all markers' names to become visible labels
+			
+			// Load GPS Visualizer's Google Maps functions (this must be loaded AFTER gv_options are set):
+			document.writeln('<script src="http://maps.gpsvisualizer.com/google_maps/functions3.js" type="text/javascript"><'+'/script>');
+		</script><script src="google_map_data/functions3_003.js" type="text/javascript"></script>		<style type="text/css">
+			#gmap_div { font-family:Arial,sans-serif; }
+			#gmap_div .gv_marker_info_window { font-family:Verdana; font-size:11px; min-width:150px; min-height:50px; }
+			#gmap_div .gv_marker_info_window a { font:inherit; }
+			#gmap_div .gv_marker_info_window_name { font:inherit; font-size:110%; font-weight:bold; padding-bottom:4px; }
+			#gmap_div .gv_marker_info_window_desc { font:inherit; padding-top:0px; margin-bottom:12px; }
+			#gmap_div .gv_marker_info_window_desc div { font:inherit; }
+			#gmap_div .gv_marker_info_window img.gv_marker_thumbnail { border-width:1px; margin:6px 0px 6px 0px; }
+			#gmap_div .gv_marker_info_window img.gv_marker_photo { margin:8px 0px 8px 0px; }
+			#gmap_div .gv_driving_directions { background-color:#eeeeee; padding:4px; margin-top:12px; font-size:92%; }
+			#gmap_div .gv_driving_directions_heading { color:#666666; font-weight:bold; }
+			#gv_center_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_center_coordinate_pair { font:inherit; }
+			#gv_mouse_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_mouse_coordinate_pair { font:inherit; }
+			#gv_map_copyright { font:10px Arial; }
+			#gv_map_copyright a { font:inherit; }
+			#gv_credit { font:bold 10px Verdana,sans-serif; }
+			.gv_label { filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; background:#333333; border:1px solid black; padding:1px; text-align:left; white-space: nowrap; font:9px Verdana,sans-serif; color:white; }
+			.gv_label img { display:none; }
+			.gv_tooltip { background-color:#ffffff; filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1; border:1px solid #666666; padding:2px; text-align:left; font:10px Verdana,sans-serif; color:black; white-space:nowrap; }
+			.gv_tooltip img.gv_marker_thumbnail { display:block; padding-top:3px; }
+			.gv_tooltip img.gv_marker_photo { display:none; }
+			img.gv_marker_thumbnail { display:block; text-decoration:none; margin:0px; }
+			img.gv_marker_photo { display:block; text-decoration:none; margin:0px; }
+			.gv_track_tooltip { border:none; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; }
+			.gv_legend_item { padding-bottom:0px; line-height:1.1em; font-weight:bold; }
+			.gv_tracklist { font:11px Arial,sans-serif; line-height:12px; background:#FFFFFF; text-align:left; }
+			.gv_tracklist_header { font-weight:bold; padding-bottom:2px; }
+			.gv_tracklist_footer { padding-top:2px; }
+			.gv_tracklist_item { padding-top:1px; padding-bottom:4px; }
+			.gv_tracklist_item_name { font-weight:bold; font-size:11px; cursor:pointer; }
+			.gv_tracklist_item_desc { font-weight:normal; font-size:11px; padding-top:2px; }
+			.gv_marker_list { font:10px Verdana,sans-serif; background:#ffffff; text-align:left; }
+			.gv_marker_list_header { font:11px Verdana,sans-serif; padding-bottom:4px; }
+			.gv_marker_list_item { font-family:Verdana,sans-serif; font-size:10px; line-height:1.2em; padding:2px 0px 4px 0px; }
+			.gv_marker_list_item_icon { cursor:pointer; float:left; margin-right:4px; margin-bottom:1px; }
+			.gv_marker_list_item_name { cursor:pointer; font-weight:bold; }
+			.gv_marker_list_item_desc { padding-top:2px; font-size:90%; }
+			.gv_marker_list_border_top { border-top:1px solid #cccccc; }
+			.gv_marker_list_border_bottom { border-bottom:1px solid #cccccc; }
+			.gv_marker_list_thumbnail { padding-top:3px; border-width:1px; display:none; }
+			.gv_marker_list_thumbnail img { border-width:1px; }
+			.gv_marker_list_folder { font-family:Verdana,sans-serif; font-size:10px; padding-bottom:4px; }
+			.gv_marker_list_folder_header { font-size:11px; font-weight:bold; padding-bottom:2px; background-color:#e4e4e4; }
+			.gv_marker_list_folder_name { background-color:#e4e4e4; }
+			.gv_marker_list_folder_item_count { font-weight:normal; font-size:10px; }
+			.gv_marker_list_folder_contents { padding-left:15px; background-color:#ffffff; }
+			.gv_infobox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; }
+			.gv_searchbox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; width:200px; }
+			.gv_maptypelink { background-color:#dddddd; color:#000000; text-align:center; white-space: nowrap; border:1px solid; border-color: #999999 #222222 #222222 #999999; padding:1px 2px 1px 2px; margin-bottom:3px; font:9px Verdana,sans-serif; text-decoration:none; cursor:pointer; }
+			.gv_maptypelink_selected { background-color:#ffffff; }
+			.gv_opacity_screen { background-color:#ffffff; }
+		</style>
+		<style type="text/css" media="print">
+			img[src^="http://www.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src^="http://maps.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src$="transparent.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="shadow.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="crosshair.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="ruler.gif"].gmnoprint { display:none; visibility:hidden; }
+			#gv_center_coordinates { display:none; visibility:hidden; }
+			#gv_measurement_icon { display:none; visibility:hidden; }
+			#gv_mouse_coordinates { display:none; visibility:hidden; }
+			#gv_credit { display:none; visibility:hidden; }
+			[jstcache="0"] { display:block; }
+		</style>
+
+<script src="google_map_data/functions3_002.js" type="text/javascript"></script>		<style type="text/css">
+			#gmap_div { font-family:Arial,sans-serif; }
+			#gmap_div .gv_marker_info_window { font-family:Verdana; font-size:11px; min-width:150px; min-height:50px; }
+			#gmap_div .gv_marker_info_window a { font:inherit; }
+			#gmap_div .gv_marker_info_window_name { font:inherit; font-size:110%; font-weight:bold; padding-bottom:4px; }
+			#gmap_div .gv_marker_info_window_desc { font:inherit; padding-top:0px; margin-bottom:12px; }
+			#gmap_div .gv_marker_info_window_desc div { font:inherit; }
+			#gmap_div .gv_marker_info_window img.gv_marker_thumbnail { border-width:1px; margin:6px 0px 6px 0px; }
+			#gmap_div .gv_marker_info_window img.gv_marker_photo { margin:8px 0px 8px 0px; }
+			#gmap_div .gv_driving_directions { background-color:#eeeeee; padding:4px; margin-top:12px; font-size:92%; }
+			#gmap_div .gv_driving_directions_heading { color:#666666; font-weight:bold; }
+			#gv_center_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_center_coordinate_pair { font:inherit; }
+			#gv_mouse_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_mouse_coordinate_pair { font:inherit; }
+			#gv_map_copyright { font:10px Arial; }
+			#gv_map_copyright a { font:inherit; }
+			#gv_credit { font:bold 10px Verdana,sans-serif; }
+			.gv_label { filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; background:#333333; border:1px solid black; padding:1px; text-align:left; white-space: nowrap; font:9px Verdana,sans-serif; color:white; }
+			.gv_label img { display:none; }
+			.gv_tooltip { background-color:#ffffff; filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1; border:1px solid #666666; padding:2px; text-align:left; font:10px Verdana,sans-serif; color:black; white-space:nowrap; }
+			.gv_tooltip img.gv_marker_thumbnail { display:block; padding-top:3px; }
+			.gv_tooltip img.gv_marker_photo { display:none; }
+			img.gv_marker_thumbnail { display:block; text-decoration:none; margin:0px; }
+			img.gv_marker_photo { display:block; text-decoration:none; margin:0px; }
+			.gv_track_tooltip { border:none; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; }
+			.gv_legend_item { padding-bottom:0px; line-height:1.1em; font-weight:bold; }
+			.gv_tracklist { font:11px Arial,sans-serif; line-height:12px; background:#FFFFFF; text-align:left; }
+			.gv_tracklist_header { font-weight:bold; padding-bottom:2px; }
+			.gv_tracklist_footer { padding-top:2px; }
+			.gv_tracklist_item { padding-top:1px; padding-bottom:4px; }
+			.gv_tracklist_item_name { font-weight:bold; font-size:11px; cursor:pointer; }
+			.gv_tracklist_item_desc { font-weight:normal; font-size:11px; padding-top:2px; }
+			.gv_marker_list { font:10px Verdana,sans-serif; background:#ffffff; text-align:left; }
+			.gv_marker_list_header { font:11px Verdana,sans-serif; padding-bottom:4px; }
+			.gv_marker_list_item { font-family:Verdana,sans-serif; font-size:10px; line-height:1.2em; padding:2px 0px 4px 0px; }
+			.gv_marker_list_item_icon { cursor:pointer; float:left; margin-right:4px; margin-bottom:1px; }
+			.gv_marker_list_item_name { cursor:pointer; font-weight:bold; }
+			.gv_marker_list_item_desc { padding-top:2px; font-size:90%; }
+			.gv_marker_list_border_top { border-top:1px solid #cccccc; }
+			.gv_marker_list_border_bottom { border-bottom:1px solid #cccccc; }
+			.gv_marker_list_thumbnail { padding-top:3px; border-width:1px; display:none; }
+			.gv_marker_list_thumbnail img { border-width:1px; }
+			.gv_marker_list_folder { font-family:Verdana,sans-serif; font-size:10px; padding-bottom:4px; }
+			.gv_marker_list_folder_header { font-size:11px; font-weight:bold; padding-bottom:2px; background-color:#e4e4e4; }
+			.gv_marker_list_folder_name { background-color:#e4e4e4; }
+			.gv_marker_list_folder_item_count { font-weight:normal; font-size:10px; }
+			.gv_marker_list_folder_contents { padding-left:15px; background-color:#ffffff; }
+			.gv_infobox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; }
+			.gv_searchbox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; width:200px; }
+			.gv_maptypelink { background-color:#dddddd; color:#000000; text-align:center; white-space: nowrap; border:1px solid; border-color: #999999 #222222 #222222 #999999; padding:1px 2px 1px 2px; margin-bottom:3px; font:9px Verdana,sans-serif; text-decoration:none; cursor:pointer; }
+			.gv_maptypelink_selected { background-color:#ffffff; }
+			.gv_opacity_screen { background-color:#ffffff; }
+		</style>
+		<style type="text/css" media="print">
+			img[src^="http://www.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src^="http://maps.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src$="transparent.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="shadow.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="crosshair.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="ruler.gif"].gmnoprint { display:none; visibility:hidden; }
+			#gv_center_coordinates { display:none; visibility:hidden; }
+			#gv_measurement_icon { display:none; visibility:hidden; }
+			#gv_mouse_coordinates { display:none; visibility:hidden; }
+			#gv_credit { display:none; visibility:hidden; }
+			[jstcache="0"] { display:block; }
+		</style>
+		<style type="text/css">
+			#gmap_div { font-family:Arial,sans-serif; }
+			#gmap_div .gv_marker_info_window { font-family:Verdana; font-size:11px; min-width:150px; min-height:50px; }
+			#gmap_div .gv_marker_info_window a { font:inherit; }
+			#gmap_div .gv_marker_info_window_name { font:inherit; font-size:110%; font-weight:bold; padding-bottom:4px; }
+			#gmap_div .gv_marker_info_window_desc { font:inherit; padding-top:0px; margin-bottom:12px; }
+			#gmap_div .gv_marker_info_window_desc div { font:inherit; }
+			#gmap_div .gv_marker_info_window img.gv_marker_thumbnail { border-width:1px; margin:6px 0px 6px 0px; }
+			#gmap_div .gv_marker_info_window img.gv_marker_photo { margin:8px 0px 8px 0px; }
+			#gmap_div .gv_driving_directions { background-color:#eeeeee; padding:4px; margin-top:12px; font-size:92%; }
+			#gmap_div .gv_driving_directions_heading { color:#666666; font-weight:bold; }
+			#gv_center_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_center_coordinate_pair { font:inherit; }
+			#gv_mouse_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_mouse_coordinate_pair { font:inherit; }
+			#gv_map_copyright { font:10px Arial; }
+			#gv_map_copyright a { font:inherit; }
+			#gv_credit { font:bold 10px Verdana,sans-serif; }
+			.gv_label { filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; background:#333333; border:1px solid black; padding:1px; text-align:left; white-space: nowrap; font:9px Verdana,sans-serif; color:white; }
+			.gv_label img { display:none; }
+			.gv_tooltip { background-color:#ffffff; filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1; border:1px solid #666666; padding:2px; text-align:left; font:10px Verdana,sans-serif; color:black; white-space:nowrap; }
+			.gv_tooltip img.gv_marker_thumbnail { display:block; padding-top:3px; }
+			.gv_tooltip img.gv_marker_photo { display:none; }
+			img.gv_marker_thumbnail { display:block; text-decoration:none; margin:0px; }
+			img.gv_marker_photo { display:block; text-decoration:none; margin:0px; }
+			.gv_track_tooltip { border:none; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; }
+			.gv_legend_item { padding-bottom:0px; line-height:1.1em; font-weight:bold; }
+			.gv_tracklist { font:11px Arial,sans-serif; line-height:12px; background:#FFFFFF; text-align:left; }
+			.gv_tracklist_header { font-weight:bold; padding-bottom:2px; }
+			.gv_tracklist_footer { padding-top:2px; }
+			.gv_tracklist_item { padding-top:1px; padding-bottom:4px; }
+			.gv_tracklist_item_name { font-weight:bold; font-size:11px; cursor:pointer; }
+			.gv_tracklist_item_desc { font-weight:normal; font-size:11px; padding-top:2px; }
+			.gv_marker_list { font:10px Verdana,sans-serif; background:#ffffff; text-align:left; }
+			.gv_marker_list_header { font:11px Verdana,sans-serif; padding-bottom:4px; }
+			.gv_marker_list_item { font-family:Verdana,sans-serif; font-size:10px; line-height:1.2em; padding:2px 0px 4px 0px; }
+			.gv_marker_list_item_icon { cursor:pointer; float:left; margin-right:4px; margin-bottom:1px; }
+			.gv_marker_list_item_name { cursor:pointer; font-weight:bold; }
+			.gv_marker_list_item_desc { padding-top:2px; font-size:90%; }
+			.gv_marker_list_border_top { border-top:1px solid #cccccc; }
+			.gv_marker_list_border_bottom { border-bottom:1px solid #cccccc; }
+			.gv_marker_list_thumbnail { padding-top:3px; border-width:1px; display:none; }
+			.gv_marker_list_thumbnail img { border-width:1px; }
+			.gv_marker_list_folder { font-family:Verdana,sans-serif; font-size:10px; padding-bottom:4px; }
+			.gv_marker_list_folder_header { font-size:11px; font-weight:bold; padding-bottom:2px; background-color:#e4e4e4; }
+			.gv_marker_list_folder_name { background-color:#e4e4e4; }
+			.gv_marker_list_folder_item_count { font-weight:normal; font-size:10px; }
+			.gv_marker_list_folder_contents { padding-left:15px; background-color:#ffffff; }
+			.gv_infobox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; }
+			.gv_searchbox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; width:200px; }
+			.gv_maptypelink { background-color:#dddddd; color:#000000; text-align:center; white-space: nowrap; border:1px solid; border-color: #999999 #222222 #222222 #999999; padding:1px 2px 1px 2px; margin-bottom:3px; font:9px Verdana,sans-serif; text-decoration:none; cursor:pointer; }
+			.gv_maptypelink_selected { background-color:#ffffff; }
+			.gv_opacity_screen { background-color:#ffffff; }
+		</style>
+		<style type="text/css" media="print">
+			img[src^="http://www.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src^="http://maps.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src$="transparent.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="shadow.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="crosshair.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="ruler.gif"].gmnoprint { display:none; visibility:hidden; }
+			#gv_center_coordinates { display:none; visibility:hidden; }
+			#gv_measurement_icon { display:none; visibility:hidden; }
+			#gv_mouse_coordinates { display:none; visibility:hidden; }
+			#gv_credit { display:none; visibility:hidden; }
+			[jstcache="0"] { display:block; }
+		</style>
+
+<script src="google_map_data/functions3.js" type="text/javascript"></script>		<style type="text/css">
+			#gmap_div { font-family:Arial,sans-serif; }
+			#gmap_div .gv_marker_info_window { font-family:Verdana; font-size:11px; min-width:150px; min-height:50px; }
+			#gmap_div .gv_marker_info_window a { font:inherit; }
+			#gmap_div .gv_marker_info_window_name { font:inherit; font-size:110%; font-weight:bold; padding-bottom:4px; }
+			#gmap_div .gv_marker_info_window_desc { font:inherit; padding-top:0px; margin-bottom:12px; }
+			#gmap_div .gv_marker_info_window_desc div { font:inherit; }
+			#gmap_div .gv_marker_info_window img.gv_marker_thumbnail { border-width:1px; margin:6px 0px 6px 0px; }
+			#gmap_div .gv_marker_info_window img.gv_marker_photo { margin:8px 0px 8px 0px; }
+			#gmap_div .gv_driving_directions { background-color:#eeeeee; padding:4px; margin-top:12px; font-size:92%; }
+			#gmap_div .gv_driving_directions_heading { color:#666666; font-weight:bold; }
+			#gv_center_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_center_coordinate_pair { font:inherit; }
+			#gv_mouse_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_mouse_coordinate_pair { font:inherit; }
+			#gv_map_copyright { font:10px Arial; }
+			#gv_map_copyright a { font:inherit; }
+			#gv_credit { font:bold 10px Verdana,sans-serif; }
+			.gv_label { filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; background:#333333; border:1px solid black; padding:1px; text-align:left; white-space: nowrap; font:9px Verdana,sans-serif; color:white; }
+			.gv_label img { display:none; }
+			.gv_tooltip { background-color:#ffffff; filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1; border:1px solid #666666; padding:2px; text-align:left; font:10px Verdana,sans-serif; color:black; white-space:nowrap; }
+			.gv_tooltip img.gv_marker_thumbnail { display:block; padding-top:3px; }
+			.gv_tooltip img.gv_marker_photo { display:none; }
+			img.gv_marker_thumbnail { display:block; text-decoration:none; margin:0px; }
+			img.gv_marker_photo { display:block; text-decoration:none; margin:0px; }
+			.gv_track_tooltip { border:none; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; }
+			.gv_legend_item { padding-bottom:0px; line-height:1.1em; font-weight:bold; }
+			.gv_tracklist { font:11px Arial,sans-serif; line-height:12px; background:#FFFFFF; text-align:left; }
+			.gv_tracklist_header { font-weight:bold; padding-bottom:2px; }
+			.gv_tracklist_footer { padding-top:2px; }
+			.gv_tracklist_item { padding-top:1px; padding-bottom:4px; }
+			.gv_tracklist_item_name { font-weight:bold; font-size:11px; cursor:pointer; }
+			.gv_tracklist_item_desc { font-weight:normal; font-size:11px; padding-top:2px; }
+			.gv_marker_list { font:10px Verdana,sans-serif; background:#ffffff; text-align:left; }
+			.gv_marker_list_header { font:11px Verdana,sans-serif; padding-bottom:4px; }
+			.gv_marker_list_item { font-family:Verdana,sans-serif; font-size:10px; line-height:1.2em; padding:2px 0px 4px 0px; }
+			.gv_marker_list_item_icon { cursor:pointer; float:left; margin-right:4px; margin-bottom:1px; }
+			.gv_marker_list_item_name { cursor:pointer; font-weight:bold; }
+			.gv_marker_list_item_desc { padding-top:2px; font-size:90%; }
+			.gv_marker_list_border_top { border-top:1px solid #cccccc; }
+			.gv_marker_list_border_bottom { border-bottom:1px solid #cccccc; }
+			.gv_marker_list_thumbnail { padding-top:3px; border-width:1px; display:none; }
+			.gv_marker_list_thumbnail img { border-width:1px; }
+			.gv_marker_list_folder { font-family:Verdana,sans-serif; font-size:10px; padding-bottom:4px; }
+			.gv_marker_list_folder_header { font-size:11px; font-weight:bold; padding-bottom:2px; background-color:#e4e4e4; }
+			.gv_marker_list_folder_name { background-color:#e4e4e4; }
+			.gv_marker_list_folder_item_count { font-weight:normal; font-size:10px; }
+			.gv_marker_list_folder_contents { padding-left:15px; background-color:#ffffff; }
+			.gv_infobox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; }
+			.gv_searchbox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; width:200px; }
+			.gv_maptypelink { background-color:#dddddd; color:#000000; text-align:center; white-space: nowrap; border:1px solid; border-color: #999999 #222222 #222222 #999999; padding:1px 2px 1px 2px; margin-bottom:3px; font:9px Verdana,sans-serif; text-decoration:none; cursor:pointer; }
+			.gv_maptypelink_selected { background-color:#ffffff; }
+			.gv_opacity_screen { background-color:#ffffff; }
+		</style>
+		<style type="text/css" media="print">
+			img[src^="http://www.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src^="http://maps.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src$="transparent.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="shadow.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="crosshair.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="ruler.gif"].gmnoprint { display:none; visibility:hidden; }
+			#gv_center_coordinates { display:none; visibility:hidden; }
+			#gv_measurement_icon { display:none; visibility:hidden; }
+			#gv_mouse_coordinates { display:none; visibility:hidden; }
+			#gv_credit { display:none; visibility:hidden; }
+			[jstcache="0"] { display:block; }
+		</style>
+		<style type="text/css">
+			#gmap_div { font-family:Arial,sans-serif; }
+			#gmap_div .gv_marker_info_window { font-family:Verdana; font-size:11px; min-width:150px; min-height:50px; }
+			#gmap_div .gv_marker_info_window a { font:inherit; }
+			#gmap_div .gv_marker_info_window_name { font:inherit; font-size:110%; font-weight:bold; padding-bottom:4px; }
+			#gmap_div .gv_marker_info_window_desc { font:inherit; padding-top:0px; margin-bottom:12px; }
+			#gmap_div .gv_marker_info_window_desc div { font:inherit; }
+			#gmap_div .gv_marker_info_window img.gv_marker_thumbnail { border-width:1px; margin:6px 0px 6px 0px; }
+			#gmap_div .gv_marker_info_window img.gv_marker_photo { margin:8px 0px 8px 0px; }
+			#gmap_div .gv_driving_directions { background-color:#eeeeee; padding:4px; margin-top:12px; font-size:92%; }
+			#gmap_div .gv_driving_directions_heading { color:#666666; font-weight:bold; }
+			#gv_center_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_center_coordinate_pair { font:inherit; }
+			#gv_mouse_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_mouse_coordinate_pair { font:inherit; }
+			#gv_map_copyright { font:10px Arial; }
+			#gv_map_copyright a { font:inherit; }
+			#gv_credit { font:bold 10px Verdana,sans-serif; }
+			.gv_label { filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; background:#333333; border:1px solid black; padding:1px; text-align:left; white-space: nowrap; font:9px Verdana,sans-serif; color:white; }
+			.gv_label img { display:none; }
+			.gv_tooltip { background-color:#ffffff; filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1; border:1px solid #666666; padding:2px; text-align:left; font:10px Verdana,sans-serif; color:black; white-space:nowrap; }
+			.gv_tooltip img.gv_marker_thumbnail { display:block; padding-top:3px; }
+			.gv_tooltip img.gv_marker_photo { display:none; }
+			img.gv_marker_thumbnail { display:block; text-decoration:none; margin:0px; }
+			img.gv_marker_photo { display:block; text-decoration:none; margin:0px; }
+			.gv_track_tooltip { border:none; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; }
+			.gv_legend_item { padding-bottom:0px; line-height:1.1em; font-weight:bold; }
+			.gv_tracklist { font:11px Arial,sans-serif; line-height:12px; background:#FFFFFF; text-align:left; }
+			.gv_tracklist_header { font-weight:bold; padding-bottom:2px; }
+			.gv_tracklist_footer { padding-top:2px; }
+			.gv_tracklist_item { padding-top:1px; padding-bottom:4px; }
+			.gv_tracklist_item_name { font-weight:bold; font-size:11px; cursor:pointer; }
+			.gv_tracklist_item_desc { font-weight:normal; font-size:11px; padding-top:2px; }
+			.gv_marker_list { font:10px Verdana,sans-serif; background:#ffffff; text-align:left; }
+			.gv_marker_list_header { font:11px Verdana,sans-serif; padding-bottom:4px; }
+			.gv_marker_list_item { font-family:Verdana,sans-serif; font-size:10px; line-height:1.2em; padding:2px 0px 4px 0px; }
+			.gv_marker_list_item_icon { cursor:pointer; float:left; margin-right:4px; margin-bottom:1px; }
+			.gv_marker_list_item_name { cursor:pointer; font-weight:bold; }
+			.gv_marker_list_item_desc { padding-top:2px; font-size:90%; }
+			.gv_marker_list_border_top { border-top:1px solid #cccccc; }
+			.gv_marker_list_border_bottom { border-bottom:1px solid #cccccc; }
+			.gv_marker_list_thumbnail { padding-top:3px; border-width:1px; display:none; }
+			.gv_marker_list_thumbnail img { border-width:1px; }
+			.gv_marker_list_folder { font-family:Verdana,sans-serif; font-size:10px; padding-bottom:4px; }
+			.gv_marker_list_folder_header { font-size:11px; font-weight:bold; padding-bottom:2px; background-color:#e4e4e4; }
+			.gv_marker_list_folder_name { background-color:#e4e4e4; }
+			.gv_marker_list_folder_item_count { font-weight:normal; font-size:10px; }
+			.gv_marker_list_folder_contents { padding-left:15px; background-color:#ffffff; }
+			.gv_infobox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; }
+			.gv_searchbox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; width:200px; }
+			.gv_maptypelink { background-color:#dddddd; color:#000000; text-align:center; white-space: nowrap; border:1px solid; border-color: #999999 #222222 #222222 #999999; padding:1px 2px 1px 2px; margin-bottom:3px; font:9px Verdana,sans-serif; text-decoration:none; cursor:pointer; }
+			.gv_maptypelink_selected { background-color:#ffffff; }
+			.gv_opacity_screen { background-color:#ffffff; }
+		</style>
+		<style type="text/css" media="print">
+			img[src^="http://www.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src^="http://maps.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src$="transparent.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="shadow.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="crosshair.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="ruler.gif"].gmnoprint { display:none; visibility:hidden; }
+			#gv_center_coordinates { display:none; visibility:hidden; }
+			#gv_measurement_icon { display:none; visibility:hidden; }
+			#gv_mouse_coordinates { display:none; visibility:hidden; }
+			#gv_credit { display:none; visibility:hidden; }
+			[jstcache="0"] { display:block; }
+		</style>
+		<style type="text/css">
+			#gmap_div { font-family:Arial,sans-serif; }
+			#gmap_div .gv_marker_info_window { font-family:Verdana; font-size:11px; min-width:150px; min-height:50px; }
+			#gmap_div .gv_marker_info_window a { font:inherit; }
+			#gmap_div .gv_marker_info_window_name { font:inherit; font-size:110%; font-weight:bold; padding-bottom:4px; }
+			#gmap_div .gv_marker_info_window_desc { font:inherit; padding-top:0px; margin-bottom:12px; }
+			#gmap_div .gv_marker_info_window_desc div { font:inherit; }
+			#gmap_div .gv_marker_info_window img.gv_marker_thumbnail { border-width:1px; margin:6px 0px 6px 0px; }
+			#gmap_div .gv_marker_info_window img.gv_marker_photo { margin:8px 0px 8px 0px; }
+			#gmap_div .gv_driving_directions { background-color:#eeeeee; padding:4px; margin-top:12px; font-size:92%; }
+			#gmap_div .gv_driving_directions_heading { color:#666666; font-weight:bold; }
+			#gv_center_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_center_coordinate_pair { font:inherit; }
+			#gv_mouse_coordinates { background-color:#ffffff; border:solid #666666 1px; padding:1px; font:10px Arial; line-height:11px; }
+			#gv_mouse_coordinate_pair { font:inherit; }
+			#gv_map_copyright { font:10px Arial; }
+			#gv_map_copyright a { font:inherit; }
+			#gv_credit { font:bold 10px Verdana,sans-serif; }
+			.gv_label { filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; background:#333333; border:1px solid black; padding:1px; text-align:left; white-space: nowrap; font:9px Verdana,sans-serif; color:white; }
+			.gv_label img { display:none; }
+			.gv_tooltip { background-color:#ffffff; filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1; border:1px solid #666666; padding:2px; text-align:left; font:10px Verdana,sans-serif; color:black; white-space:nowrap; }
+			.gv_tooltip img.gv_marker_thumbnail { display:block; padding-top:3px; }
+			.gv_tooltip img.gv_marker_photo { display:none; }
+			img.gv_marker_thumbnail { display:block; text-decoration:none; margin:0px; }
+			img.gv_marker_photo { display:block; text-decoration:none; margin:0px; }
+			.gv_track_tooltip { border:none; filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8; }
+			.gv_legend_item { padding-bottom:0px; line-height:1.1em; font-weight:bold; }
+			.gv_tracklist { font:11px Arial,sans-serif; line-height:12px; background:#FFFFFF; text-align:left; }
+			.gv_tracklist_header { font-weight:bold; padding-bottom:2px; }
+			.gv_tracklist_footer { padding-top:2px; }
+			.gv_tracklist_item { padding-top:1px; padding-bottom:4px; }
+			.gv_tracklist_item_name { font-weight:bold; font-size:11px; cursor:pointer; }
+			.gv_tracklist_item_desc { font-weight:normal; font-size:11px; padding-top:2px; }
+			.gv_marker_list { font:10px Verdana,sans-serif; background:#ffffff; text-align:left; }
+			.gv_marker_list_header { font:11px Verdana,sans-serif; padding-bottom:4px; }
+			.gv_marker_list_item { font-family:Verdana,sans-serif; font-size:10px; line-height:1.2em; padding:2px 0px 4px 0px; }
+			.gv_marker_list_item_icon { cursor:pointer; float:left; margin-right:4px; margin-bottom:1px; }
+			.gv_marker_list_item_name { cursor:pointer; font-weight:bold; }
+			.gv_marker_list_item_desc { padding-top:2px; font-size:90%; }
+			.gv_marker_list_border_top { border-top:1px solid #cccccc; }
+			.gv_marker_list_border_bottom { border-bottom:1px solid #cccccc; }
+			.gv_marker_list_thumbnail { padding-top:3px; border-width:1px; display:none; }
+			.gv_marker_list_thumbnail img { border-width:1px; }
+			.gv_marker_list_folder { font-family:Verdana,sans-serif; font-size:10px; padding-bottom:4px; }
+			.gv_marker_list_folder_header { font-size:11px; font-weight:bold; padding-bottom:2px; background-color:#e4e4e4; }
+			.gv_marker_list_folder_name { background-color:#e4e4e4; }
+			.gv_marker_list_folder_item_count { font-weight:normal; font-size:10px; }
+			.gv_marker_list_folder_contents { padding-left:15px; background-color:#ffffff; }
+			.gv_infobox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; }
+			.gv_searchbox { font:11px Arial,sans-serif; background:#ffffff; text-align:left; border:solid #666666 1px; padding:4px; width:200px; }
+			.gv_maptypelink { background-color:#dddddd; color:#000000; text-align:center; white-space: nowrap; border:1px solid; border-color: #999999 #222222 #222222 #999999; padding:1px 2px 1px 2px; margin-bottom:3px; font:9px Verdana,sans-serif; text-decoration:none; cursor:pointer; }
+			.gv_maptypelink_selected { background-color:#ffffff; }
+			.gv_opacity_screen { background-color:#ffffff; }
+		</style>
+		<style type="text/css" media="print">
+			img[src^="http://www.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src^="http://maps.gpsvisualizer.com/"].gmnoprint { display:inline; }
+			img[src$="transparent.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="shadow.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="crosshair.png"].gmnoprint { display:none; visibility:hidden; }
+			img[src$="ruler.gif"].gmnoprint { display:none; visibility:hidden; }
+			#gv_center_coordinates { display:none; visibility:hidden; }
+			#gv_measurement_icon { display:none; visibility:hidden; }
+			#gv_mouse_coordinates { display:none; visibility:hidden; }
+			#gv_credit { display:none; visibility:hidden; }
+			[jstcache="0"] { display:block; }
+		</style>
+
+
+		
+		<style type="text/css">
+			/* Put any custom style definitions here (e.g., .gv_marker_info_window, .gv_marker_info_window_name, .gv_marker_list_item, .gv_tooltip, .gv_label, etc.) */
+			.gv_label {
+				filter:alpha(opacity=70); -moz-opacity:0.70; opacity:0.70;
+				background:#333333; border:1px solid black; padding:1px;
+				font:9px Verdana,sans-serif; color:white; font-weight:normal;
+			}
+			
+		</style>
+		
+		<!-- end GPSV setup script and styles; begin map-drawing script (they must be separate) -->
+		<script type="text/javascript">
+			function GV_Map() {
+				GV_Setup_Map();
+				
+				GV_Finish_Map();
+			}
+			GV_Map(); // execute the above code			
+			
+		</script>
+		
+		
+	
+
+
+</body></html>
